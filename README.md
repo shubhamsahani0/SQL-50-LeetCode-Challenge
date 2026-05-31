@@ -2,7 +2,7 @@
 Solutions for [SQL 50 Study Plan](https://leetcode.com/studyplan/top-sql-50/) on LeetCode
 
 --- 
-Day - 1
+01-Select
 
 [1757 - Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/)
 ```sql
@@ -42,7 +42,7 @@ SELECT tweet_id
 FROM Tweets
 WHERE length(content) > 15
 ```
-
+02-Basic Joins
 [1378 - Replace Employee ID With The Unique Identifier](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier)
 ```sql
 SELECT unique_id, name
@@ -149,7 +149,7 @@ LEFT JOIN Confirmations c
 ON s.user_id = c.user_id 
 GROUP BY s.user_id;  
 ```
-
+03-Basic Aggregate Functions
 [620. Not Boring Movies](https://leetcode.com/problems/not-boring-movies)
 ```sql
 -- odd id, "boring", rating desc
@@ -268,6 +268,7 @@ FROM Activity
 WHERE (player_id, event_date) IN 
 (SELECT player_id, next_day FROM recent_login)) / (SELECT COUNT(DISTINCT player_id) FROM Activity), 2) AS fraction
 ```
+04-Sorting and Grouping
 [2356. Number of Unique Subjects Taught by Each Teacher](https://leetcode.com/problems/number-of-unique-subjects-taught-by-each-teacher)
 ```sql
 SELECT teacher_id, COUNT(DISTINCT subject_id) cnt
@@ -348,6 +349,8 @@ HAVING COUNT(DISTINCT product_key) = (
   FROM Product
 )
 ```
+05-Advanced Select and Joins
+
 [1731. The Number of Employees Which Report to Each Employee
 ](https://leetcode.com/problems/the-number-of-employees-which-report-to-each-employee/)
 
@@ -428,6 +431,7 @@ WHEN product_id NOT IN
   WHERE change_date <= '2019-08-16'
 )
 ```
+06-Subqueries
 
 
 [1978. Employees Whose Manager Left the Company](https://leetcode.com/problems/employees-whose-manager-left-the-company)
@@ -637,6 +641,4 @@ WHERE tiv_2015 IN (SELECT tiv_2015 FROM insurance GROUP BY tiv_2015 HAVING COUNT
 AND (lat,lon) IN (SELECT lat,lon FROM insurance GROUP BY lat,lon HAVING COUNT(*) = 1)
 ```
 
- SQL 50 LeetCode Challenge
 
-My solutions for LeetCode SQL 50 Study Plan.
