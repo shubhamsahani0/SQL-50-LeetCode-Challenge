@@ -43,6 +43,7 @@ FROM Tweets
 WHERE length(content) > 15
 ```
 02-Basic Joins
+
 [1378 - Replace Employee ID With The Unique Identifier](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier)
 ```sql
 SELECT unique_id, name
@@ -150,6 +151,7 @@ ON s.user_id = c.user_id
 GROUP BY s.user_id;  
 ```
 03-Basic Aggregate Functions
+
 [620. Not Boring Movies](https://leetcode.com/problems/not-boring-movies)
 ```sql
 -- odd id, "boring", rating desc
@@ -269,6 +271,7 @@ WHERE (player_id, event_date) IN
 (SELECT player_id, next_day FROM recent_login)) / (SELECT COUNT(DISTINCT player_id) FROM Activity), 2) AS fraction
 ```
 04-Sorting and Grouping
+
 [2356. Number of Unique Subjects Taught by Each Teacher](https://leetcode.com/problems/number-of-unique-subjects-taught-by-each-teacher)
 ```sql
 SELECT teacher_id, COUNT(DISTINCT subject_id) cnt
